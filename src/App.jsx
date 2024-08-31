@@ -3,9 +3,11 @@ import MistImage from "./assets/backgrounds/mist.jpeg";
 import Header from "./components/header/Header";
 import WeatherBoard from "./components/weather/WeatherBoard";
 
+import WeatherProvider from "./provider/WeatherProvider";
+
 function App() {
   return (
-    <>
+    <WeatherProvider>
       <div
         style={{ backgroundImage: `url('${MistImage}')` }}
         className="grid place-items-center h-screen bg-no-repeat bg-cover">
@@ -16,7 +18,7 @@ function App() {
           </section>
         </main>
       </div>
-    </>
+    </WeatherProvider>
   );
 }
 
