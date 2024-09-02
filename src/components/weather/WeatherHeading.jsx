@@ -51,6 +51,7 @@ function WeatherHeading() {
           </div>
         </div>
       </div>
+      <p>Last Update:</p>
       <p className="text-sm lg:text-lg">
         {getFormattedDataTime(time, "time", false)} -{" "}
         {getFormattedDataTime(time, "date", false)}
