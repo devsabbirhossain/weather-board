@@ -5,16 +5,20 @@ import RainBG from "./assets/backgrounds/shower-rain.jpg";
 import SnowBG from "./assets/backgrounds/snow.jpg";
 import SunnyBG from "./assets/backgrounds/sunny.jpg";
 import ThunderBG from "./assets/backgrounds/thunderstorm.jpg";
+// import NighBG from "./assets/backgrounds/light-night.jpg";
 
 import Header from "./components/header/Header";
 import WeatherBoard from "./components/weather/WeatherBoard";
 
 import { useContext, useEffect, useState } from "react";
 import { WeatherContext } from "./context";
+import { getFormattedDataTime } from "./utils/date-utils";
 
 function Home() {
   const { weatherData, loading } = useContext(WeatherContext);
   const [bgImage, setBGImage] = useState("");
+  const time = getFormattedDataTime(weatherData.time, "time", false);
+
   function getWeatherBackground(climate) {
     switch (climate) {
       case "Rain":

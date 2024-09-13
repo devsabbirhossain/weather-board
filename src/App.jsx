@@ -1,11 +1,14 @@
 import "./App.css";
 import Home from "./Home";
+import FavouriteProvider from "./provider/FavouriteProvider";
 import WeatherProvider from "./provider/WeatherProvider";
 
 function App() {
   return (
     <WeatherProvider>
-      <Home />
+      <FavouriteProvider>
+        <Home />
+      </FavouriteProvider>
     </WeatherProvider>
   );
 }
