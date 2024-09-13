@@ -33,10 +33,6 @@ function AddToFav() {
         fav.location === location
     );
     setIsFavourite(found);
-
-    return () => {
-      setIsFavourite(false);
-    };
   }, []);
   return (
     <div className="md:col-span-2">

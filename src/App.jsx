@@ -1,15 +1,20 @@
 import "./App.css";
 import Home from "./Home";
-import FavouriteProvider from "./provider/FavouriteProvider";
-import WeatherProvider from "./provider/WeatherProvider";
+import {
+  FavouriteProvider,
+  LocationProvider,
+  WeatherProvider,
+} from "./provider";
 
 function App() {
   return (
-    <WeatherProvider>
-      <FavouriteProvider>
-        <Home />
-      </FavouriteProvider>
-    </WeatherProvider>
+    <LocationProvider>
+      <WeatherProvider>
+        <FavouriteProvider>
+          <Home />
+        </FavouriteProvider>
+      </WeatherProvider>
+    </LocationProvider>
   );
 }
 
